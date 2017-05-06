@@ -2,4 +2,4 @@
 
 Pequeña aplicacion que utiliza Vanilla JS para manipular objetos del DOM.
 
-![Image of Yaktocat](images/javascript.jpg)
+![Vanilla JS Logo](images/javascript.jpg)
