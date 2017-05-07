@@ -9,12 +9,12 @@ Pequeña aplicacion que utiliza Vanilla JS para manipular objetos del DOM.
 
 Para correr el programa debemos:
 
-- abrir `index.html` en un navegador web
-- Abrir al consola del navegador (Developer tools)
+- Abrir `index.html` en un navegador web
+- Abrir la consola del navegador (Developer tools)
 
 ### Cargar noticias
 
-1. tipear `misNoticias.agregar()`, aregar un titulo y luego un parrafo
+1. Tipear `misNoticias.agregar()`, aregar un titulo y luego un parrafo
 
 2. Para agregar mas noticias repetimos el paso `1`.
 
@@ -22,7 +22,7 @@ Para correr el programa debemos:
 
 ### Mostrar noticias
 
-1. tipear `misNoticias.mostrar()`
+1. Tipear `misNoticias.mostrar()`
 
 ![Ejemplo de muestra de noticias](images/mostrar-noticias.png)
 
