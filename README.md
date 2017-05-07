@@ -18,9 +18,13 @@ Para correr el programa debemos:
 
 2. Para agregar mas noticias repetimos el paso `1`.
 
+![Ejemplo de carga de noticias](images/cargar-noticias.png)
+
 ### Mostrar noticias
 
 1. tipear `misNoticias.mostrar()`
 
-![Ejemplo de carga de noticias](images/mis-noticias.png)
+![Ejemplo de muestra de noticias](images/mostrar-noticias.png)
+
+
 
