@@ -2,63 +2,73 @@ var misNoticias = (function() {
 
   // entorno privado
 
+  // Creamos un array para guardar las noticias
+  var noticias = [];
+
   function agregarNoticia() {
-    var titulo = prompt("Ingrese el titulo de la noticia");
-    var cuerpo = prompt("Ingrese el text de la noticia");
 
 
-    // Agarramos el container de noticias
-    var containerNoticias = document.getElementById("noticias");
+    function Noticia() {
+      this.titulo = "";
+      this.cuerpo = "";
+    }
 
-    // Creamos el second level heading element
-    var tituloConFormato = document.createElement("h2");
+    var noticia = new Noticia();
 
-    // Le agregamos el titulo que le dimos
-    tituloConFormato.innerHTML = titulo;
+    noticia.titulo = prompt("Ingrese el titulo de la noticia");
+    noticia.cuerpo = prompt("Ingrese el text de la noticia");
 
-    // Creamos el parrafo con el texto de las noticias
-    var parrafoConFormato = document.createElement("p");
-
-    // Le agregamos el texto que le dimos
-    parrafoConFormato.innerHTML = cuerpo;
-
-    // Lo agregamos al container noticias
-    containerNoticias.appendChild(tituloConFormato);
-    containerNoticias.appendChild(parrafoConFormato);
-
-
-    //
-    // container.appendChild(parrafoConFormato);
-    // parrafoConFormato.innerText(cuerpo);
-
+    noticias.push(noticia);
 
   }
 
 
   function mostrarNoticia() {
-    // Todavia no
+
+    // Agarramos el container de noticias (fijate que metodo usamos)
+    var containerNoticias = document.getElementById("noticias");
+
+
+    // Creamos un par de variables para el titulo y parrafo
+    var tituloConFormato;
+    var parrafoConFormato;
+
+
+    // Iteramos sobre el array de noticias
+    for (var i = 0; i < noticias.length; i++) {
+
+      // Creamos los elementos y los asignamos
+      tituloConFormato = document.createElement("h2");
+      parrafoConFormato = document.createElement("p");
+
+      // Agrego el contenido del titulo y noticias
+      tituloConFormato.innerHTML = noticias[i].titulo;
+      parrafoConFormato.innerHTML = noticias[i].cuerpo;
+
+      // Los agrego al DOM
+      containerNoticias.appendChild(tituloConFormato);
+      containerNoticias.appendChild(parrafoConFormato);
+    }
+
+    // Vaciamos el array al finalizar (proba que pasa si sacas esto)
+    noticias = [];
+
   }
 
 
   // entorno publico
-
-
   return {
     agregar: function() {
       // hacer algo
       agregarNoticia();
-    },
+      return "Carga de noticias exitosa";
 
-    eliminar: function() {
-      // eliminar algo
     },
-
     mostrar: function() {
-      // mostrar en el DOM
+      mostrarNoticia();
     }
   };
 
 })();
 
 console.log("Carga de JS realizada con exito!");
-
