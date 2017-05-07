@@ -6,6 +6,7 @@ body {
   border: 5px solid gray;
   height: auto;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .main-title {
@@ -13,3 +14,4 @@ body {
   letter-spacing: 0.2em;
   font-size: 4em;
 }
+
