@@ -18,7 +18,14 @@ var misNoticias = (function() {
     noticia.titulo = prompt("Ingrese el titulo de la noticia");
     noticia.cuerpo = prompt("Ingrese el text de la noticia");
 
-    noticias.push(noticia);
+    if (noticia.titulo && noticia.cuerpo !== null) {
+      noticias.push(noticia);
+      return true;
+    } else {
+      return false;
+    }
+
+
 
   }
 
@@ -60,12 +67,16 @@ var misNoticias = (function() {
   return {
     agregar: function() {
       // hacer algo
-      agregarNoticia();
-      return "Carga de noticias exitosa";
+      if (agregarNoticia()) {
+        return "Carga de noticias exitosa";
+      } else {
+        return "No se ha cargado nada";
+      }
 
     },
     mostrar: function() {
       mostrarNoticia();
+      return "Cargando noticias al DOM";
     }
   };
 
